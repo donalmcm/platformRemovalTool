@@ -1,0 +1,1 @@
+# A tool to merge identical files
