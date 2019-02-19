@@ -24,3 +24,9 @@ do
 	echo "Please select a valid option"
 	read platformChoice
 done
+
+# Finds all instances of files and directorys containing the user input
+echo "*** Proceding to delete $platformChoice ***"
+find . -name "*${platformChoice}*" -type d -exec rm -rf {} + # Remove folders
+find . -type f -name "*${platformChoice}*" -delete # Remove files
+echo "*** Removal Complete ***"
