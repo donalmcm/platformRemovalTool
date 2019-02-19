@@ -13,3 +13,14 @@ for i in "${platforms[@]"; do
  done
 echo ""
 echo "**************************************************"
+
+# Taking in users choice
+read platformChoice
+
+# Ensuring user choice matches an existing platform
+while [[ ! " ${platforms[@] " =~ " ${platformChoice} " ]]
+do
+	echo "Invalid choice"
+	echo "Please select a valid option"
+	read platformChoice
+done
